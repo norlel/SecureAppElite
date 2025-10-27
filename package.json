@@ -1,0 +1,35 @@
+{
+  "name": "friendcircle",
+  "private": true,
+  "workspaces": ["frontend"],
+  "scripts": {
+    "compile": "hardhat compile",
+    "postcompile": "hardhat typechain",
+    "test": "hardhat test",
+    "node": "hardhat node",
+    "deploy": "hardhat deploy --network localhost --tags FriendCircle",
+    "genabi": "ts-node scripts/generate-abi.ts && ts-node scripts/generate-addresses.ts",
+    "gen:abi": "ts-node scripts/generate-abi.ts",
+    "gen:addr": "ts-node scripts/generate-addresses.ts"
+  },
+  "dependencies": {
+    "@fhevm/solidity": "^0.8.0",
+    "@zama-fhe/oracle-solidity": "^0.1.0"
+  },
+  "devDependencies": {
+    "@fhevm/hardhat-plugin": "^0.1.0",
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.7",
+    "@nomicfoundation/hardhat-ethers": "^3.0.7",
+    "@nomicfoundation/hardhat-verify": "^2.0.7",
+    "@typechain/ethers-v6": "^0.5.1",
+    "@typechain/hardhat": "^9.1.0",
+    "ethers": "^6.13.2",
+    "hardhat": "^2.22.8",
+    "hardhat-deploy": "^0.12.4",
+    "hardhat-gas-reporter": "^1.0.10",
+    "typechain": "^8.3.2",
+    "solidity-coverage": "^0.8.12",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  }
+}
